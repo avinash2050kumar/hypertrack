@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Track and compare the trading performance of any Hyperliquid wallet."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Applies MUI's colour-scheme class before first paint; key matches THEME_STORAGE_KEY.
+      (function () {
+        var mode = 'dark';
+        try {
+          var stored = localStorage.getItem('hypertrack:theme');
+          if (stored === 'light' || stored === 'dark') mode = stored;
+          if (stored === 'system') {
+            mode = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+        } catch (e) {}
+        document.documentElement.classList.add(mode);
+      })();
+    </script>
+    <title>HyperTrack</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
