@@ -14,10 +14,21 @@ import { walletRoutes } from './routes/wallet.routes.js';
 import type { WalletService } from './services/wallet.service.js';
 
 interface AppDeps {
-  config: Pick<Config, 'CORS_ORIGIN' | 'RATE_LIMIT_PER_MIN' | 'RATE_LIMIT_BATCH_PER_MIN'>;
+  config: Pick<
+    Config,
+    'CORS_ORIGIN' | 'TRUST_PROXY' | 'RATE_LIMIT_PER_MIN' | 'RATE_LIMIT_BATCH_PER_MIN'
+  >;
   logger: Logger;
   wallets: WalletService;
   liveSubscriptions?: () => number;
+}
+
+function corsOrigin(value: string): true | string[] {
+  if (value.trim() === '*') return true;
+  return value
+    .split(',')
+    .map((origin) => origin.trim().replace(/\/+$/, ''))
+    .filter(Boolean);
 }
 
 export function createApp({
@@ -28,7 +39,7 @@ export function createApp({
 }: AppDeps): Express {
   const app = express();
   app.disable('x-powered-by');
-  app.set('trust proxy', 'loopback');
+  app.set('trust proxy', config.TRUST_PROXY);
 
   app.use(requestId());
   app.use(
@@ -38,7 +49,7 @@ export function createApp({
       autoLogging: { ignore: (req) => req.url === '/api/health' },
     }),
   );
-  app.use(cors({ origin: config.CORS_ORIGIN === '*' ? true : config.CORS_ORIGIN.split(',') }));
+  app.use(cors({ origin: corsOrigin(config.CORS_ORIGIN) }));
   app.use(express.json({ limit: JSON_BODY_LIMIT }));
 
   app.use('/api/health', healthRoutes(liveSubscriptions));

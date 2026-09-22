@@ -15,6 +15,10 @@ const envSchema = z.object({
   HL_WEIGHT_PER_MIN: z.coerce.number().int().positive().default(1000),
   WS_MAX_UPSTREAM: z.coerce.number().int().positive().default(10),
   CORS_ORIGIN: z.string().default('*'),
+  TRUST_PROXY: z
+    .string()
+    .default('loopback')
+    .transform((value) => (/^\d+$/.test(value) ? Number(value) : value)),
   LOG_LEVEL: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent']).default('info'),
 });
 
