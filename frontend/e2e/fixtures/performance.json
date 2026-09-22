@@ -1,0 +1,251 @@
+{
+  "data": {
+    "address": "0x9e8b1e51c642f4c8b87c6ba11c53d516a218afc4",
+    "window": "7d",
+    "metrics": {
+      "realizedPnl": -98800.51044599993,
+      "fees": 7230.576280000014,
+      "netPnl": -106031.08672599994,
+      "volume": 57897290.94941077,
+      "closingFills": 1156,
+      "wins": 529,
+      "losses": 627,
+      "grossProfit": 13343.766625000006,
+      "grossLoss": -112144.27707100008,
+      "winRate": 0.45761245674740486,
+      "profitFactor": 0.11898749515815135,
+      "avgWin": 25.224511578449917,
+      "avgLoss": -178.85849612599694,
+      "expectancy": -85.46756958996545,
+      "avgHoldTimeMs": 35199349.91494806,
+      "pnl": 1341986.188993,
+      "roi": 0.14492356635842138,
+      "maxDrawdown": { "abs": 461071.3781950008, "pct": 0.04530140981518688 },
+      "sharpe": 9.91269605087178
+    },
+    "byCoin": [
+      {
+        "coin": "ZEC",
+        "realizedPnl": 13343.766625000006,
+        "fees": 716.4150329999999,
+        "netPnl": 12627.351592000006,
+        "volume": 2985063.827000001,
+        "closingFills": 529,
+        "winRate": 1
+      },
+      {
+        "coin": "xyz:NBIS",
+        "realizedPnl": 0,
+        "fees": 216.47201099999987,
+        "netPnl": -216.47201099999987,
+        "volume": 4509840.9882999975,
+        "closingFills": 0,
+        "winRate": null
+      },
+      {
+        "coin": "xyz:SP500",
+        "realizedPnl": 0,
+        "fees": 528.041407,
+        "netPnl": -528.041407,
+        "volume": 11000867.723700015,
+        "closingFills": 0,
+        "winRate": null
+      },
+      {
+        "coin": "xyz:CL",
+        "realizedPnl": 0,
+        "fees": 984.255813000002,
+        "netPnl": -984.255813000002,
+        "volume": 20505343.124930996,
+        "closingFills": 0,
+        "winRate": null
+      },
+      {
+        "coin": "xyz:GOLD",
+        "realizedPnl": -25244.922081000015,
+        "fees": 4309.306699000001,
+        "netPnl": -29554.228780000016,
+        "volume": 8977723.02325001,
+        "closingFills": 282,
+        "winRate": 0
+      },
+      {
+        "coin": "xyz:SILVER",
+        "realizedPnl": -86899.35499000007,
+        "fees": 476.0853170000005,
+        "netPnl": -87375.44030700007,
+        "volume": 9918452.262229998,
+        "closingFills": 345,
+        "winRate": 0
+      }
+    ],
+    "long": {
+      "realizedPnl": -112144.27707100008,
+      "closingFills": 627,
+      "winRate": 0,
+      "volume": 34406883.997480035
+    },
+    "short": {
+      "realizedPnl": 13343.766625000006,
+      "closingFills": 529,
+      "winRate": 1,
+      "volume": 23490406.95193103
+    },
+    "bestTrades": [
+      {
+        "tid": 1063995760214273,
+        "hash": "0xd6aa4bf8b01c8467d8240444d9f8bc0202d500de4b1fa3397a72f74b6f105e52",
+        "coin": "ZEC",
+        "px": 1527,
+        "sz": 82.63,
+        "side": "buy",
+        "dir": "Close Short",
+        "time": 1789949427916,
+        "startPosition": -1440.38,
+        "closedPnl": 700.661085,
+        "fee": 30.282242,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 831288360307389,
+        "hash": "0x5397f518d7e7141455110444d9f72402035200fe72ea32e6f760a06b96eaedfe",
+        "coin": "ZEC",
+        "px": 1527.7,
+        "sz": 82.72,
+        "side": "buy",
+        "dir": "Close Short",
+        "time": 1789949398872,
+        "startPosition": -1780.16,
+        "closedPnl": 643.52024,
+        "fee": 30.329122,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 853161690385584,
+        "hash": "0x3d9312deda014c4c3f0c0444d9fa4c0207fc00c475046b1ee15bbe3199052636",
+        "coin": "ZEC",
+        "px": 1528.6,
+        "sz": 80.52,
+        "side": "buy",
+        "dir": "Close Short",
+        "time": 1789949456865,
+        "startPosition": -1050.37,
+        "closedPnl": 553.93734,
+        "fee": 29.539889,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 240789190902375,
+        "hash": "0x5cd912241efbc7965e520444d9fb860202810009b9fee66800a1bd76ddffa181",
+        "coin": "ZEC",
+        "px": 1528,
+        "sz": 53.01,
+        "side": "buy",
+        "dir": "Close Short",
+        "time": 1789949479248,
+        "startPosition": -695.1,
+        "closedPnl": 396.488295,
+        "fee": 19.439827,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 406514573438499,
+        "hash": "0x5397f518d7e7141455110444d9f72402035200fe72ea32e6f760a06b96eaedfe",
+        "coin": "ZEC",
+        "px": 1527.6,
+        "sz": 37.8,
+        "side": "buy",
+        "dir": "Close Short",
+        "time": 1789949398872,
+        "startPosition": -1820.19,
+        "closedPnl": 297.8451,
+        "fee": 13.858387,
+        "feeToken": "USDC",
+        "crossed": true
+      }
+    ],
+    "worstTrades": [
+      {
+        "tid": 917829113369543,
+        "hash": "0x64973d952b67eccc66100444e25a330203bf007ac66b0b9e085fe8e7ea6bc6b7",
+        "coin": "xyz:SILVER",
+        "px": 65.857,
+        "sz": 4514.44,
+        "side": "sell",
+        "dir": "Close Long",
+        "time": 1789988594197,
+        "startPosition": 49714.41,
+        "closedPnl": -5326.587756,
+        "fee": 14.270758,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 553613902458241,
+        "hash": "0x95b0a836a5461122972a0444e2596a0202ba001c40492ff4397953896449eb0d",
+        "coin": "xyz:SILVER",
+        "px": 65.863,
+        "sz": 4514.44,
+        "side": "sell",
+        "dir": "Close Long",
+        "time": 1789988579548,
+        "startPosition": 64753.98,
+        "closedPnl": -5299.501116,
+        "fee": 14.272058,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 800242806781349,
+        "hash": "0x62c31178683519b4643c0444e25cdc020307005e03383886068bbccb2738f39f",
+        "coin": "xyz:SILVER",
+        "px": 65.867,
+        "sz": 3947.11,
+        "side": "sell",
+        "dir": "Close Long",
+        "time": 1789988643284,
+        "startPosition": 3947.11,
+        "closedPnl": -4617.723989,
+        "fee": 12.479246,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 267535880871480,
+        "hash": "0x41ab6af4a73ebc7b43250444e25ac202047900da4231db4de574164766329665",
+        "coin": "xyz:SILVER",
+        "px": 65.865,
+        "sz": 3032.95,
+        "side": "sell",
+        "dir": "Close Long",
+        "time": 1789988604721,
+        "startPosition": 41572.52,
+        "closedPnl": -3554.314105,
+        "fee": 9.588732,
+        "feeToken": "USDC",
+        "crossed": true
+      },
+      {
+        "tid": 493127649903100,
+        "hash": "0xaad7fde85cbec52fac510444e25b1d02088a00cdf7b1e4014ea0a93b1bb29f1a",
+        "coin": "xyz:SILVER",
+        "px": 65.871,
+        "sz": 3032.95,
+        "side": "sell",
+        "dir": "Close Long",
+        "time": 1789988612009,
+        "startPosition": 33534.81,
+        "closedPnl": -3536.116405,
+        "fee": 9.589605,
+        "feeToken": "USDC",
+        "crossed": true
+      }
+    ],
+    "fills": { "count": 4477, "truncated": true, "oldest": 1789949398872 }
+  },
+  "meta": { "cached": false, "asOf": 1790074122464 }
+}
