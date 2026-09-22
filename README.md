@@ -9,7 +9,7 @@ Paste an address and you get its PnL, equity and drawdown charts, open positions
 - **Frontend:** React, Vite, MUI, TanStack Query, Recharts, Zustand
 - **Backend:** Node, Express 5, `ws`, Zod, Pino
 
-The backend sits between the browser and the Hyperliquid API. It caches responses, keeps within Hyperliquid's rate limits, and shares one upstream WebSocket subscription per wallet across all viewers.
+The backend sits between the browser and the Hyperliquid API. It caches responses, keeps within Hyperliquid's rate limits, and shares one upstream WebSocket subscription per wallet across all viewers. See [docs/api.md](docs/api.md) for the endpoints and WebSocket messages.
 
 ## Getting started
 
