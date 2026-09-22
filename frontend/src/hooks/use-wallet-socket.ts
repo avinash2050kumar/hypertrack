@@ -1,7 +1,7 @@
 import { useQueryClient, type QueryClient } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 
-import { walletKeys, wsUrl } from '../api';
+import { LIVE_ENABLED, walletKeys, wsUrl } from '../api';
 import { SOCKET_MAX_BACKOFF_MS, type SocketStatus } from '../data';
 import {
   applyLiveState,
@@ -37,10 +37,11 @@ export function useWalletSocket(address: string): {
   lastUpdate: number | null;
 } {
   const queryClient = useQueryClient();
-  const [status, setStatus] = useState<SocketStatus>('connecting');
+  const [status, setStatus] = useState<SocketStatus>(LIVE_ENABLED ? 'connecting' : 'unavailable');
   const [lastUpdate, setLastUpdate] = useState<number | null>(null);
 
   useEffect(() => {
+    if (!LIVE_ENABLED) return;
     let socket: WebSocket | null = null;
     let retryTimer: ReturnType<typeof setTimeout> | undefined;
     let attempt = 0;
